@@ -1,0 +1,42 @@
+import os
+
+def iniciando():
+    print("""
+██╗░░░██╗░█████╗░██╗░░░░░██╗██████╗░░█████╗░  ██╗░░░██╗░██████╗███████╗██████╗░
+██║░░░██║██╔══██╗██║░░░░░██║██╔══██╗██╔══██╗  ██║░░░██║██╔════╝██╔════╝██╔══██╗
+╚██╗░██╔╝███████║██║░░░░░██║██║░░██║███████║  ██║░░░██║╚█████╗░█████╗░░██████╔╝
+░╚████╔╝░██╔══██║██║░░░░░██║██║░░██║██╔══██║  ██║░░░██║░╚═══██╗██╔══╝░░██╔══██╗
+░░╚██╔╝░░██║░░██║███████╗██║██████╔╝██║░░██║  ╚██████╔╝██████╔╝███████╗██║░░██║
+░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝╚═════╝░╚═╝░░╚═╝  ░╚═════╝░╚═════╝░╚══════╝╚═╝░░╚═╝
+          
+          """)
+
+def validando():
+    username= "matheus.costa"
+    senha= 22023
+
+    user_inserido= input('Insira o usuário: ')
+    senha_inserida= int(input ('Insira a senha: '))
+
+    if user_inserido== username and senha_inserida==senha:
+        print('Seja bem vindo!')
+    else:
+        print ('Senha ou usuário inválido')
+        condicao= input('Deseja tentar novamente? (S/N) ')
+        if condicao== "S" or condicao=="s":
+            validando()
+        else:
+            fim_programa()
+
+    
+    
+def fim_programa():
+    os.system ('cls')
+    print ('Programa Finalizado!')
+
+def main():
+    iniciando()
+    validando()
+
+if __name__ == '__main__':
+    main()

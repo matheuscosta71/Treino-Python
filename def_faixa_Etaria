@@ -1,0 +1,43 @@
+import os
+
+def iniciando():
+    print("""
+╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╭━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮
+╰╮╭╮┃╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱┃╭╯╱╱╱╱╱╱╱╱╱╱╱╱╭╯╰╮
+╱┃┃┃┣━━┳━━┳━━┳╮╭┫╰━┳━┳━━╮╭━━╮╭╯╰┳━━┳┳╮╭┳━━╮╭━┻╮╭╋━━┳━┳┳━━╮
+╱┃┃┃┃┃━┫━━┫╭━┫┃┃┃╭╮┃╭┫╭╮┃┃╭╮┃╰╮╭┫╭╮┣╋╋╋┫╭╮┃┃┃━┫┃┃╭╮┃╭╋┫╭╮┃
+╭╯╰╯┃┃━╋━━┃╰━┫╰╯┃╰╯┃┃┃╭╮┃┃╭╮┃╱┃┃┃╭╮┃┣╋╋┫╭╮┃┃┃━┫╰┫╭╮┃┃┃┃╭╮┃
+╰━━━┻━━┻━━┻━━┻━━┻━━┻╯╰╯╰╯╰╯╰╯╱╰╯╰╯╰┻┻╯╰┻╯╰╯╰━━┻━┻╯╰┻╯╰┻╯╰╯
+          """)
+
+def inserindo_dados():
+    idade=int(input('Insira a sua idade: '))
+    if idade<= 12:
+        print(f'Uma pessoa com a idade {idade} é uma criança')
+    elif idade<= 18:
+        print(f'Uma pessoa com a idade {idade} é um adolescente')
+    elif idade<= 60:
+        print(f'Uma pessoa com a idade {idade} é um adulto')
+    else:
+        print(f'Uma pessoa com a idade {idade} é um idoso')
+
+    continua= input('Deseja descobrir a faixa etária de outra pessoa? (S/N): ')
+    print(continua)
+    
+    if continua=='S' or continua=='s':
+        inserindo_dados()
+    else:
+        finalizar_programa()
+
+def finalizar_programa():
+    os.system ('cls')
+    print("Finalizando o programa")
+
+def main():
+    iniciando()
+    inserindo_dados()
+
+if __name__ == '__main__':
+    main()
+    
+    

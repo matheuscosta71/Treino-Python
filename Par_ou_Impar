@@ -1,0 +1,30 @@
+import os
+def exibir_nome():
+    print("""
+█▀█ ▄▀█ █▀█   █▀█ █░█   █ █▀▄▀█ █▀█ ▄▀█ █▀█
+█▀▀ █▀█ █▀▄   █▄█ █▄█   █ █░▀░█ █▀▀ █▀█ █▀▄
+          
+          """)
+
+def comparando_numero():
+    numero= int(input('Insira um numero: '))
+    if numero//2==0:
+        print(f'O número {numero} é ímpar!')
+    else:
+        print(f'O número {numero} é par!')
+    continua= input('Deseja testar outro número (S/N):')
+    if continua=='S' or continua=='s':
+        comparando_numero()
+    else :
+        finalizando()
+    
+def finalizando ():
+    os.system ('cls')
+    print ('---------Programa Finalizado---------')
+
+def main ():
+    exibir_nome()
+    comparando_numero()
+
+if __name__ == '__main__':
+      main()
