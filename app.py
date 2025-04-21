@@ -36,6 +36,13 @@ def opcao_invalida():
       voltar_ao_menu_principal()
 
 def cadastrar_novo_restaurante():
+      '''Essa função é responsável por cadastrar novo restaurante
+      
+      Inputs: nome do restaurante e categoria
+
+      Output: adiciona um novo restaurante a lista restaurantes
+      
+      '''
       exibir_subtitulo('Cadastro de novos restaurantes')
       nome_do_restaurante = input ('Digite o nome do restaurante: ')
       categoria = input (f'Digite o nome da categoria do restaurante {nome_do_restaurante}: ')
@@ -48,7 +55,6 @@ def cadastrar_novo_restaurante():
 
 def listar_restaurantes():
       exibir_subtitulo('Listando os Restaurantes\n')
-
       for restaurante in restaurantes:
             nome_restaurante = restaurante['nome']
             categoria = restaurante['categoria']
